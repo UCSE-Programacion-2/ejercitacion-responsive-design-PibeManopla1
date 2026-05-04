@@ -15,7 +15,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    font-weight: 300px;
+    font-weight: 300; 
 }
 
 img {
@@ -60,7 +60,7 @@ nav ul li a {
 }
 
 .bg-header h1 {
-    font-weight: 500px;
+    font-weight: 500;
 }
 
 /* Estilos section */
@@ -87,7 +87,7 @@ h2 {
 .card {
     border-radius: 20px;
     padding: 20px;
-    width: 50%;
+    width: 30%;
     border: 1px solid #ccc;
     box-shadow: 2px 2px 6px #ccc;
     margin: 20px 10px;
@@ -184,3 +184,86 @@ footer ul {
 
 /*** Responsive */
 
+@media (max-width: 768px) {
+
+    section > div, 
+    #card-section > div, 
+    footer {
+        flex-direction: column;
+        align-items: center; 
+    }
+
+
+    .card {
+        width: 100%; 
+        margin: 15px 0;
+    }
+
+
+    .contacto, 
+    .formulario, 
+    footer > div {
+        width: 100%;
+        text-align: center; 
+    }
+
+    section, footer {
+        padding: 20px;
+    }
+}
+
+
+@media (max-width: 450px) {
+    section, footer {
+        padding: 30px 20px;
+    }
+
+    h2 { font-size: 1.5rem; margin-bottom: 20px; }
+
+    .card, .formulario, .contacto, footer > div {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .card > h3 { font-size: 1.3rem; text-align: center; }
+    .contacto { text-align: center; margin-top: 20px; }
+
+    nav ul {
+        flex-direction: column; 
+        align-items: center;
+        gap: 10px;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 15px; 
+        width: 100%;
+        text-align: center;
+    }
+
+    .bg-header h1 {
+        font-size: 1.6rem;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    footer { text-align: center; }
+
+    .news-letter {
+        display: flex;
+        
+        flex-direction: column;
+    }
+
+    .news-letter > input[type="text"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .news-letter > input[type="submit"] {
+        position: static; 
+        width: 100%; 
+
+    }
+}
